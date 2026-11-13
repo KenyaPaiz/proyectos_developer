@@ -19,6 +19,9 @@ export async function buscarPeliculas(titulo) {
     });
 
     const response = await fetch(`${BASE_URL}/search/movie?${params}`)
+    // validamos si la respuesta es mala
+    if (!response.ok) throw new Error(`Error de la API (código ${response.status})`)
+
     const data = await response.json()
     return data
 }

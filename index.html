@@ -1,13 +1,29 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>api-peliculas</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>api-peliculas</title>
+</head>
+
+<body>
+  <h1>🎬 Buscador de Películas</h1>
+
+  <!-- Paso 1: campo de texto y botones -->
+  <div class="buscador">
+    <input type="text" id="inputBuscar" placeholder="Escribe el nombre de una película..." />
+    <button id="btnBuscar">Buscar</button>
+    <button id="btnPopulares">Ver populares</button>
+  </div>
+
+  <!-- Espacio para mensajes (cargando, errores, no encontrada) -->
+  <p id="mensaje"></p>
+
+  <!-- Espacio vacío donde se mostrarán los resultados -->
+  <div id="resultados"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
